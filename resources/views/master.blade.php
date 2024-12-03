@@ -16,4 +16,22 @@
     @yield('content')
     {{View::make('footer')}}
 </body>
+<style>
+    .carousel-item img {
+        max-height: 400px; /* Adjust based on your desired height */
+        max-width:400px; /* Adjust based on your desired height */
+        /* object-fit: cover; Crop the image to fit */
+    }
+
+    .carousel-caption {
+        background: rgba(175, 166, 166, 0.5); /* Semi-transparent background for captions */
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .carousel-caption h2, .carousel-caption h3 {
+        color: rgb(6, 6, 6); /* Text color for better contrast */
+        margin: 10px; /* Remove default margin */
+    }
+</style>
 </html>

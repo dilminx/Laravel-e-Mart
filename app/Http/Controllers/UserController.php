@@ -28,6 +28,6 @@ class UserController extends Controller
 
         // Redirect to the product page (if this is a web app)
         $request->session()->put("user", $user);
-        return redirect('/');
+        return redirect('/product');
     }
 }

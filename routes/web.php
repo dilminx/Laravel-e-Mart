@@ -15,12 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login', function () {
+Route::get('/', function () {
     return view('login');
 });
 Route::post('/login', [UserController::class,'login']);
 
-Route::get('/',[ProductController::class,'product']);
+
+
+Route::get('/product',[ProductController::class,'product']);
+Route::get('/welcome',[ProductController::class,'product1']);
 
 
 
