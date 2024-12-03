@@ -15,4 +15,17 @@ class ProductController extends Controller
         $data = Product::all();
         return view('/welcome',['products'=>$data]);
     }
+    public function details($id)
+    {
+        // Fetch the product by ID
+        $product = Product::find($id);
+
+        // Handle the case where the product doesn't exist
+        if (!$product) {
+            abort(404, 'Product not found');
+        }
+
+        // Pass the product to the 'detail' view
+        return view('detail', ['product' => $product]);
+    }
 }

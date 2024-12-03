@@ -24,7 +24,11 @@ Route::post('/login', [UserController::class,'login']);
 
 Route::get('/product',[ProductController::class,'product']);
 Route::get('/welcome',[ProductController::class,'product1']);
+Route::get('/detail/{id}',[ProductController::class,'details']);
 
+// Route::get('/detail', function () {
+//     return view('detail');
+// });
 
 
 
