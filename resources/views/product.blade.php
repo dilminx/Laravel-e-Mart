@@ -41,6 +41,7 @@
                                 style="height: 200px; width:200px">
                             <div class="card-body text-center">
                                 <h5 class="card-title">{{ $item['name'] }}</h5>
+                                <h4 style="color: green">{{$item['price']}}</h4>
                                 <p class="card-text">{{ Str::limit($item['description'], 50, '...') }}</p>
                             </div>
                         </div>

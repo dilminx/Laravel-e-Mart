@@ -61,8 +61,8 @@
                         <a class="nav-link" href="#">Orderst</a>
                     </li>
                 </ul>
-                <form class="d-flex mx-2" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <form action="/search" class="d-flex mx-2" role="search">
+                    <input name="query" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
                 <a class="nav-link mx-4 border border-dark border-2 p-2" href="#">Cart</a>

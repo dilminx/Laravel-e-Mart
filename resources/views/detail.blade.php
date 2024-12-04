@@ -12,7 +12,7 @@
             </div>
 
             <!-- Product Information -->
-            <div class="col-md-6">
+            <div class="col-md-6" style="height: 65vh">
                 <h1 class="mb-3">{{ $product['name'] }}</h1>
                 <h2 class="text-success mb-3">LKR {{ ($product['price']) }}</h2>
                 <h4 class="text-muted mb-3">Category: {{ ($product['category']) }}</h4>

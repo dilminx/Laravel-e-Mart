@@ -28,4 +28,11 @@ class ProductController extends Controller
         // Pass the product to the 'detail' view
         return view('detail', ['product' => $product]);
     }
+
+    public function search(Request $request)
+    {
+         $data = Product::where('name','like','%'.$request->input('query').'%')->get();
+        return view('/search',['products'=>$data]);
+    }
+    
 }
