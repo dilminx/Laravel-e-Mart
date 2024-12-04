@@ -20,7 +20,13 @@
 
                 <!-- Action Buttons -->
                 <div class="mt-4">
-                    <button class="btn btn-primary btn-lg me-3">Add to Cart</button>
+                    <form action="/addToCart" method="POST">
+                    @csrf
+                        <input type="hidden" name="product_id" value={{ $product['id']}}>
+                        <button type="submit">Add TO Cart</button>
+                
+                </form>
+
                     <a href="/product" class="btn btn-outline-secondary btn-lg">Back to Products</a>
                 </div>
             </div>
