@@ -7,13 +7,15 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function product(){
+    public function product()
+    {
         $data = Product::all();
-        return view('/product',['products'=>$data]);
+        return view('/product', ['products' => $data]);
     }
-    public function product1(){
+    public function product1()
+    {
         $data = Product::all();
-        return view('/welcome',['products'=>$data]);
+        return view('/welcome', ['products' => $data]);
     }
     public function details($id)
     {
@@ -31,8 +33,14 @@ class ProductController extends Controller
 
     public function search(Request $request)
     {
-         $data = Product::where('name','like','%'.$request->input('query').'%')->get();
-        return view('/search',['products'=>$data]);
+        $data = Product::where('name', 'like', '%' . $request->input('query') . '%')
+        ->orWhere('category', 'like', '%' . $request->input('query') . '%')->get();
+        if ($data->isEmpty()) {
+            return view('/notfound');
+
+        } else {
+            return view('/search', ['products' => $data]);
+        }
     }
-    
+
 }

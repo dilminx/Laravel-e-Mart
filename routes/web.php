@@ -26,6 +26,7 @@ Route::get('/product',[ProductController::class,'product']);
 Route::get('/welcome',[ProductController::class,'product1']);
 Route::get('/detail/{id}',[ProductController::class,'details']);
 Route::get('/search',[ProductController::class,'search']);
+Route::get('/notfound',[ProductController::class,'notfound']);
 
 
 
