@@ -56,10 +56,10 @@ $total = ProductController::cartItem();
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/product">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">My Orders</a>
+                        <a class="nav-link" href="/cartlist">My Orders</a>
                     </li>
                 </ul>
                 <form action="/search" class="d-flex mx-4" role="search">
@@ -67,7 +67,7 @@ $total = ProductController::cartItem();
                         aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
-                <a class="nav-link mx-4 border border-dark border-2 p-2" href="#">Cart({{ $total }})</a>
+                <a class="nav-link mx-4 border border-dark border-2 p-2" href="cartlist">Cart({{ $total }})</a>
                 <!-- Dropdown -->
                 <div class="dropdown">
                     <button class="btn mx-4 border border-2  dropdown-toggle" type="button" id="dropdownMenuButton"
@@ -81,7 +81,7 @@ $total = ProductController::cartItem();
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="#">
                                 @if (Session::has('user'))
-                                    <a style="text-decoration: none; display:flex; justify-content:center" href="/">Logout</a>
+                                    <a style="text-decoration: none; display:flex; justify-content:center" href="/logout">Logout</a>
                                 @else
                                     <a style="text-decoration: none; display:flex; justify-content:center" href="/">Login</a>
                                 @endif

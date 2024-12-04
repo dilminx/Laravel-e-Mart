@@ -29,6 +29,15 @@ Route::get('/search',[ProductController::class,'search']);
 Route::get('/notfound',[ProductController::class,'notfound']);
 Route::post('/addToCart',[ProductController::class,'addCart']);
 
+Route::get(
+    '/logout',
+    function () {
+        Session::forget('user');
+        return view('/login');
+    });
+
+Route::get('/cartlist',[ProductController::class,'cartList']);
+Route::get('/removecart/{id}', [ProductController::class, 'removeItem']);
 
 
 
