@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Session;
 
 class ProductController extends Controller
 {
@@ -57,4 +58,19 @@ class ProductController extends Controller
             return view('login');
         }
     }
-}
+    // public static function cartItem(){
+    //     $userId =Session::get('user')['id'];
+    //     return Cart::where('user_id', $userId)->count();
+    // }
+    public static function cartItem()
+    {
+        $userId = Session::get('user')['id'] ?? null;
+
+        // Check if userId exists
+        if (!$userId) {
+            return 0; // Return 0 if no user is logged in
+        }
+
+        return Cart::where('user_id', $userId)->count();
+    }
+    }

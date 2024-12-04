@@ -2,7 +2,7 @@
 @section('content')
     {{-- -------------------------------- Slider bar ----------------------- --}}
     <div style="background-color: rgb(231, 231, 231)">
-        <div class="container max-h custom-product mt-4" style="height: 80vh; ">
+        <div class="container max-h custom-product mt-4" style="height: 60vh; ">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     @foreach ($products as $index => $item)
