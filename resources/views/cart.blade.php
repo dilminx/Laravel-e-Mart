@@ -1,1 +1,0 @@
-<h2>cart page created</h2>

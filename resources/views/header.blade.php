@@ -59,7 +59,7 @@ $total = ProductController::cartItem();
                         <a class="nav-link active" aria-current="page" href="/product">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/cartlist">My Orders</a>
+                        <a class="nav-link" href="/myorders">My Orders</a>
                     </li>
                 </ul>
                 <form action="/search" class="d-flex mx-4" role="search">
