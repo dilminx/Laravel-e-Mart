@@ -1,6 +1,6 @@
 @extends('master')
 @section('content')
-    <div class="container mt-0 " style="height: 80vh">
+    <div class="container mt-0 " style="min-height: 80vh; height: auto;">
         {{-- Order Now buttton --}}
         <h3 class="mb-4">Cart Items</h3>
         <div class="container d-flex justify-content-end item-center">

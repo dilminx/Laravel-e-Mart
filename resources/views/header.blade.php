@@ -84,6 +84,7 @@ $total = ProductController::cartItem();
                                     <a style="text-decoration: none; display:flex; justify-content:center" href="/logout">Logout</a>
                                 @else
                                     <a style="text-decoration: none; display:flex; justify-content:center" href="/">Login</a>
+                                    <a style="text-decoration: none; display:flex; justify-content:center" href="/registerform">register</a>
                                 @endif
                             </a></li>
 

@@ -105,8 +105,8 @@ class ProductController extends Controller
             ->first()
             ->total_price;
             if (!$total) {
-            
-                return  view('/notfound');
+
+            return redirect('/product');
                 
             }
 
@@ -141,6 +141,13 @@ class ProductController extends Controller
     }
 
     public function myOrders(){
-        return 'hello';
+        $userId = Session::get('user')['id'];
+        $orders =  DB::table('orders')
+            ->join('products', 'orders.product_id', '=', 'products.id')
+            ->where('orders.user_id', $userId)
+            ->get();
+            
+
+        return view('myOrders', ['orders' => $orders]);
     }
 }
